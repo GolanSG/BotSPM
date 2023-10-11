@@ -8,6 +8,8 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
+        .library(name: "MessengerTransport",
+                 targets: ["MessengerTransport"]),
         .library(name: "GenesysCloudCore",
                  targets: ["GenesysCloudCoreTarget"]),
         .library(name: "GenesysCloudAccessibility",
@@ -19,9 +21,13 @@ let package = Package(
         .library(name: "GenesysCloudMessenger",
                  targets: ["GenesysCloudMessengerTarget"]),
         .library(name: "GenesysCloud",
-                 targets: ["GenesysCloudTarget"]),
+                 targets: ["GenesysCloudTarget"])
     ],
     targets: [
+        .binaryTarget(name: "MessengerTransport",
+                      url: "https://genesysdx.jfrog.io/artifactory/TransportSDK/MessengerTransportSDK.xcframework_2.4.1-rc.zip",
+                      checksum: "8365afef3ef60319c0f415f0799ad562bbacdbddf4a4e57ee2336cb54edde8d0"),
+        
         .binaryTarget(name: "GenesysCloudCoreTarget",
                       url: "https://genesysdx.jfrog.io/artifactory/genesys-cloud-ios.prod/GenesysCloudCore/GenesysCloudCore_version_t1.5.0_commit_04c4ead1e64e480a6cbce313aeb2b415fb534914.zip",
                       checksum: "9cf504a8e8b55aba03dd1109b1d12526f5624578c3a2a4438973840010af4338"),
