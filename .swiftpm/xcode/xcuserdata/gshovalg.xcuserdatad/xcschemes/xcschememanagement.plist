@@ -17,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>Bot</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BotSPM</key>
 		<dict>
 			<key>primary</key>

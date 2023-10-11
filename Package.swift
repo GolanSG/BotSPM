@@ -15,7 +15,7 @@ let package = Package(
     ],
     
     dependencies: [.package(url: "https://github.com/GolanSG/CoreSPM.git",
-                            from: "1.5.2")],
+                            from: "1.0.0")],
     targets: [
         .binaryTarget(
             name: "Bot",
