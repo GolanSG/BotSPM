@@ -12,6 +12,11 @@
 		<key>BotSPM-Package.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Core.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>BotSPM</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>Core</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -28,32 +28,23 @@ let package = Package(
     ]
 )
 
-//let package = Package(
-//    name: "spmpoc",
-//    products: [
-//        .library(
-//            name: "Logger",
-//            targets: ["LoggerTarget"]),
-//    ],
-//    dependencies: [
-//        .package(
-//            name: "CocoaLumberjack",
-//            url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
-//            from: "3.6.1"),
-//    ],
-//    targets: [
-//        .target(
-//              name: "LoggerTarget",
-//              dependencies: [.target(name: "LoggerWrapper",
-//                                     condition: .when(platforms: [.iOS]))]
-//            ),
-//        .target(
-//              name: "LoggerWrapper",
-//              dependencies: [
-//                .target(name: "Logger", condition: .when(platforms: [.iOS])),
-//                .product(name: "CocoaLumberjack", package: "CocoaLumberjack")
-//              ]
-//            ),
-//        .binaryTarget(name: "Logger", url: "https://mypath.com/Logger.xcframework.zip", checksum: "mychecksum")
-//    ]
-//)
+let package2 = Package(
+    name: "Core",
+    platforms: [
+        .iOS(.v14)
+    ],
+    products: [
+        .library(
+            name: "Core",
+            targets: ["Core"]
+        ),
+    ],
+    dependencies: [],
+    targets: [
+        .binaryTarget(
+            name: "Core",
+            url: "https://genesysdx.jfrog.io/artifactory/genesys-cloud-ios.prod/GenesysCloudCore/GenesysCloudCore_version_t1.5.0_commit_04c4ead1e64e480a6cbce313aeb2b415fb534914.zip",
+            checksum: "9cf504a8e8b55aba03dd1109b1d12526f5624578c3a2a4438973840010af4338"
+        ),
+    ]
+)
